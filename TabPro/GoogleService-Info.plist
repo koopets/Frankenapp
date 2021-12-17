@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>320903207722-thvr5lvaritckld4j4mbkdeh5sbor5i2.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.320903207722-thvr5lvaritckld4j4mbkdeh5sbor5i2</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBW15u_ACvU2sVplAJXZnV7_c681EYsTgE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>320903207722</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.fishfinger.TabPro</string>
+	<key>PROJECT_ID</key>
+	<string>taboo-fb918</string>
+	<key>STORAGE_BUCKET</key>
+	<string>taboo-fb918.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:320903207722:ios:e92f2c556182cfd1e35c53</string>
+</dict>
+</plist>
