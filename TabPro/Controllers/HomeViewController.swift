@@ -90,6 +90,7 @@ class HomeViewController: UIViewController {
                     NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
                     player!.seek(to: CMTime.zero)
                     player!.play()
+                
                     self.player?.isMuted = true
                 }
                 @objc func playerItemDidReachEnd() {
