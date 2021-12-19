@@ -40,7 +40,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         
         return table
     }()
-
+    
     var locations = [Location]()
     
     override func viewDidLoad() {
@@ -56,23 +56,23 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil);
-
+        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(sender:)), name: UIResponder.keyboardWillHideNotification, object: nil);
-        }
-
-        @objc func keyboardWillShow(sender: NSNotification) {
-             self.view.frame.origin.y = -150 // Move view 150 points upward
-        }
-
-        @objc func keyboardWillHide(sender: NSNotification) {
-             self.view.frame.origin.y = 0 // Move view to original position
+    }
+    
+    @objc func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y = -150 // Move view 150 points upward
+    }
+    
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0 // Move view to original position
         
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
-    
+        
         
         
     }
@@ -84,7 +84,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         field.frame = CGRect(x: 10, y: 20+label.frame.size.height, width: view.frame.size.width-20, height: 50)
         let tableY: CGFloat = field.frame.origin.y+field.frame.size.height+5
         tableView.frame = CGRect(x: 0, y: tableY, width: view.frame.size.width, height: view.frame.size.height-tableY)
- 
+        
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         field.resignFirstResponder()
@@ -92,8 +92,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         if let text = field.text, !text.isEmpty {
             LocationManager.shared.findLocations(with: text) { [weak self] locations in
                 DispatchQueue.main.async {
-                self?.locations = locations
-                self?.tableView.reloadData()
+                    self?.locations = locations
+                    self?.tableView.reloadData()
                     
                 }
             }
@@ -119,19 +119,11 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDe
         let coordinate = locations[indexPath.row].coordinates
         
         delegate?.searchViewController(_vc: self, didSelectLocationWith: coordinate)
-    
-    
-//        let tapGesture = UITapGestureRecognizer(target: self, action: Selector(("hideKeyboard")))
-//        tapGesture.cancelsTouchesInView = true
-//        tableView.addGestureRecognizer(tapGesture)
-//    }
-//
-//    func hideKeyboard() {
-//        tableView.endEditing(true)
+        
     }
     
     
     
-
-
+    
+    
 }

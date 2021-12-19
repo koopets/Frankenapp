@@ -9,7 +9,7 @@ import UIKit
 
 struct CollectionTableViewCellViewModel {
     let viewModels: [TileCollectionViewCellViewModel]
-
+    
 }
 
 protocol CollectionTableViewCellDelegate: AnyObject {
@@ -30,17 +30,14 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
         collectionView.register(TileCollectionViewCell.self, forCellWithReuseIdentifier: TileCollectionViewCell.identifier)
-       //collectionView.backgroundColor = .systemBackground
-        //collectionView.backgroundColor = .opaqueSeparator
         collectionView.backgroundColor = .none
         
         return collectionView
     }()
     
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        //contentView.backgroundColor = .systemBackground
         contentView.backgroundColor = .none
         contentView.addSubview(collectionView)
         collectionView.delegate = self
@@ -50,25 +47,25 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         fatalError()
     }
     
-
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
         collectionView.frame = contentView.bounds
-
+        
     }
     
-
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModels.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TileCollectionViewCell.identifier, for: indexPath) as? TileCollectionViewCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TileCollectionViewCell.identifier, for: indexPath) as? TileCollectionViewCell else {
             fatalError()
         }
         cell.configure(with: viewModels[indexPath.row])
-
+        
         
         return cell
     }
@@ -81,8 +78,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width: CGFloat = contentView.frame.size.width/1.5
         return CGSize(width: width, height: width/1.4)
-//        let width: CGFloat = contentView.frame.size.width/2.5
-//        return CGSize(width: width, height: width/1.1)
+        //        let width: CGFloat = contentView.frame.size.width/2.5
+        //        return CGSize(width: width, height: width/1.1)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -92,5 +89,5 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         let viewModel = viewModels[indexPath.row]
         delegate?.collectionTableViewCellDidTapItem(with: viewModel)
     }
-        
-        }
+    
+}

@@ -26,27 +26,26 @@ class MapViewController: UIViewController, SearchViewControllerDelegate {
         
         let searchVC = SearchViewController()
         searchVC.delegate = self
-      
+        
         panel.set(contentViewController: searchVC)
         panel.addPanel(toParent: self)
         
-        //view.backgroundColor = .systemGray
         
         mapView.showsCompass = false  // Hide built-in compass
-
+        
         let compassButton = MKCompassButton(mapView: mapView)
         compassButton.compassVisibility = .visible
         
-
+        
         mapView.addSubview(compassButton)
-
-
+        
+        
         compassButton.translatesAutoresizingMaskIntoConstraints = false
         compassButton.trailingAnchor.constraint(equalTo: mapView.trailingAnchor, constant: -12).isActive = true
         compassButton.topAnchor.constraint(equalTo: mapView.topAnchor, constant: 50).isActive = true
- 
-        }
-
+        
+    }
+    
     
     
     func searchViewController(_vc: SearchViewController, didSelectLocationWith coordinates: CLLocationCoordinate2D?) {
@@ -56,7 +55,6 @@ class MapViewController: UIViewController, SearchViewControllerDelegate {
         }
         panel.move(to: .tip, animated: true)
         
-        //mapView.removeAnnotations(mapView.annotations)
         let pin = MKPointAnnotation()
         pin.coordinate = coordinates
         mapView.addAnnotation(pin)

@@ -8,7 +8,7 @@
 import UIKit
 
 class MediaViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(CollectionTableViewCell.self, forCellReuseIdentifier: CollectionTableViewCell.identifier)
@@ -17,39 +17,38 @@ class MediaViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     
     private let viewModels: [CollectionTableViewCellViewModel] = [CollectionTableViewCellViewModel(viewModels: [ TileCollectionViewCellViewModel(name: "Gear", imageName: "t"),
-        TileCollectionViewCellViewModel(name: "Jungles", imageName: "fg"),
-        TileCollectionViewCellViewModel(name: "Horizons", imageName: "sf"),
-        TileCollectionViewCellViewModel(name: "Timofey", imageName: "tl"),
-        TileCollectionViewCellViewModel(name: "Sunshine", imageName: "sfl"),
-        TileCollectionViewCellViewModel(name: "Woods", imageName: "st")
+                                                                                                                 TileCollectionViewCellViewModel(name: "Jungles", imageName: "fg"),
+                                                                                                                 TileCollectionViewCellViewModel(name: "Horizons", imageName: "sf"),
+                                                                                                                 TileCollectionViewCellViewModel(name: "Timofey", imageName: "tl"),
+                                                                                                                 TileCollectionViewCellViewModel(name: "Sunshine", imageName: "sfl"),
+                                                                                                                 TileCollectionViewCellViewModel(name: "Woods", imageName: "st")
                                                                                                                  
-                                                                                                                
-        ])]
-
+                                                                                                                 
+                                                                                                               ])]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //view.backgroundColor = .black
+        
         
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "FL.jpeg")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
-    
+        
         
         view.addSubview(tableView)
         tableView.dataSource = self
         tableView.delegate = self
         
-    
-            
+        
+        
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
         tableView.backgroundColor = .white.withAlphaComponent(0.3)
-        //tableView.backgroundColor = .white.withAlphaComponent(0.1)
-        //tableView.backgroundColor = .none
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -61,11 +60,10 @@ class MediaViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath)
                 as? CollectionTableViewCell else {
                     fatalError()
-
-        }
+                    
+                }
         cell.delegate = self
         cell.confiure(with: viewModel)
-        //cell.backgroundColor = .white.withAlphaComponent(0.3)
         cell.backgroundColor = .clear
         
         return cell
@@ -78,12 +76,9 @@ class MediaViewController: UIViewController, UITableViewDataSource, UITableViewD
 }
 
 extension MediaViewController: CollectionTableViewCellDelegate {
-   func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
-//        let alert = UIAlertController(title: viewModel.name, message: "This thing is active!", preferredStyle: .alert)
-//        alert.addAction(UIAlertAction(title: "Dissmiss", style: .cancel, handler: nil))
-//        present(alert, animated: true)
-present(SubscriptionViewController(), animated: true, completion: nil)
-       
+    func collectionTableViewCellDidTapItem(with viewModel: TileCollectionViewCellViewModel) {
+        present(SubscriptionViewController(), animated: true, completion: nil)
+        
     }
     
-    }
+}

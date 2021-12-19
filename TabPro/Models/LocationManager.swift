@@ -17,7 +17,7 @@ struct Location {
 
 class LocationManager: NSObject {
     static let shared = LocationManager()
-
+    
     public func findLocations(with query: String, completion: @escaping (([Location]) -> Void)) {
         let geoCoder = CLGeocoder()
         
@@ -54,5 +54,5 @@ class LocationManager: NSObject {
             completion(models)
         }
         
-}
+    }
 }

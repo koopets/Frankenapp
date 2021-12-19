@@ -8,7 +8,7 @@
 import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
-static let identifier = "SettingsTableViewCell"
+    static let identifier = "SettingsTableViewCell"
     
     private let iconContainer: UIView = {
         let view = UIView()
@@ -67,6 +67,6 @@ static let identifier = "SettingsTableViewCell"
         iconImageView.image = model.icon
         iconContainer.backgroundColor = model.iconBackgroundColor
     }
-
+    
 }
 

@@ -8,8 +8,8 @@
 import UIKit
 
 struct TileCollectionViewCellViewModel {
+    
     let name: String
-    //let backgroundColor: UIColor
     let imageName: String
 }
 
@@ -42,7 +42,7 @@ class TileCollectionViewCell: UICollectionViewCell {
         contentView.layer.borderColor = CGColor.init(red: 255, green: 255, blue: 255, alpha: 0.5)
         //contentView.layer.borderColor = UIColor.quaternaryLabel.cgColor
         //contentView.layer.borderColor = UIColor.quaternaryLabel.cgColor
-
+        
     }
     
     required init?(coder: NSCoder) {
@@ -55,8 +55,6 @@ class TileCollectionViewCell: UICollectionViewCell {
     }
     
     func configure(with viewModel: TileCollectionViewCellViewModel) {
-        //imageView.image = UIImage(named: "sfl")
-        //self.myImageView.image = UIImage(named: viewModel.imageName)
         myImageView.image = UIImage(named: viewModel.imageName)
         label.text = viewModel.name
     }

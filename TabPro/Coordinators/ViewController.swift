@@ -14,28 +14,22 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
-        
+    
     private let button: UIButton = {
-        //let button = UIButton(frame: CGRect(x: 100, y: 650, width: 200, height: 50))
         let button = UIButton(frame: CGRect(x: 100, y: 250, width: 200, height: 50))
         button.setTitle("Register", for: .normal)
         button.backgroundColor = .systemGray.withAlphaComponent(0.5)
         button.layer.cornerRadius = 8
-//        button.layer.borderWidth = 0.5
-//        button.layer.borderColor = CGColor(red: 4, green: 4, blue: 4, alpha: 1)
         button.setTitleColor(.white, for: .normal)
         return button
         
     }()
     
     private let logButton: UIButton = {
-        //let logButton = UIButton(frame: CGRect(x: 100, y: 720, width: 200, height: 50))
         let logButton = UIButton(frame: CGRect(x: 100, y: 320, width: 200, height: 50))
         logButton.setTitle("Log In", for: .normal)
         logButton.backgroundColor = .systemGray.withAlphaComponent(0.5)
         logButton.layer.cornerRadius = 8
-//        button.layer.borderWidth = 0.5
-//        button.layer.borderColor = CGColor(red: 4, green: 4, blue: 4, alpha: 1)
         logButton.setTitleColor(.white, for: .normal)
         return logButton
         
@@ -44,13 +38,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "FL.jpeg")
         backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
         self.view.insertSubview(backgroundImage, at: 0)
         
-        //view.backgroundColor = .systemPink
         view.addSubview(button)
         button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
         view.addSubview(logButton)
@@ -93,9 +86,6 @@ class ViewController: UIViewController {
         vcSix.navigationBar.backgroundColor = .opaqueSeparator
         
         
-        //vcOne.navigationBar.backgroundColor = .yellow
-        //navigationController?.modalPresentationStyle = .fullScreen
-        
         
         tabBarViewController.setViewControllers([vcOne, vcTwo, vcThree, vcFour, vcFive], animated: false)
         
@@ -108,11 +98,10 @@ class ViewController: UIViewController {
         }
         
         tabBarViewController.modalPresentationStyle = .fullScreen
-        //tabBarViewController.tabBar.isTranslucent = false
         tabBarViewController.tabBar.backgroundColor = .white
         present(tabBarViewController, animated: true)
     }
 }
 
-    
-    
+
+

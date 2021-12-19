@@ -131,7 +131,6 @@
 		9619A0542753C88C0031C1A6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				96F3E4C8271F6896005B1CF5 /* ViewController.swift */,
 				9619A0592753ED030031C1A6 /* LoginViewController.swift */,
 				967215C0275CDA0800D3E9DC /* ActionViewController.swift */,
 				9614B59E2765FA3D00940DD6 /* SubscriptionViewController.swift */,
@@ -142,6 +141,14 @@
 				9614B5982765F81F00940DD6 /* MediaViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		968A134B276F262A00F28CCA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				96F3E4C8271F6896005B1CF5 /* ViewController.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		96F3E4B8271F6896005B1CF5 = {
@@ -167,6 +174,7 @@
 			children = (
 				96F3E4C6271F6896005B1CF5 /* SceneDelegate.swift */,
 				96F3E4C4271F6896005B1CF5 /* AppDelegate.swift */,
+				968A134B276F262A00F28CCA /* Coordinators */,
 				9619A0542753C88C0031C1A6 /* Controllers */,
 				9619A0532753C8760031C1A6 /* Views */,
 				9619A0522753C85A0031C1A6 /* Models */,
