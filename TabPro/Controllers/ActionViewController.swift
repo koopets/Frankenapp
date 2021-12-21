@@ -19,12 +19,12 @@ struct ProductViewModel {
     
     func fetchItems() {
         let products = [
-            Product(imageName: "figure.walk.diamond.fill", title: "Human"),
-            Product(imageName: "bicycle", title: "Bike"),
-            Product(imageName: "house.fill", title: "Home"),
+            Product(imageName: "figure.walk.diamond.fill", title: "Choose direction"),
+            Product(imageName: "bicycle", title: "Favourite gear"),
+            Product(imageName: "house.fill", title: "Take a rest"),
             Product(imageName: "bitcoinsign.circle", title: "Bike"),
             Product(imageName: "gear", title: "Settings"),
-            Product(imageName: "person.circle", title: "Money"),
+            Product(imageName: "person.circle", title: "Add a person"),
             Product(imageName: "airplane", title: "Flights"),
             Product(imageName: "bell", title: "Activity"),
             Product(imageName: "peacesign", title: "Peace"),

@@ -24,6 +24,7 @@
 		967215BD275CC8B100D3E9DC /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */; };
 		967215BF275CD0F300D3E9DC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967215BE275CD0F300D3E9DC /* MapViewController.swift */; };
 		967215C1275CDA0800D3E9DC /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967215C0275CDA0800D3E9DC /* ActionViewController.swift */; };
+		9688B9072772777C005BA7DD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688B9062772777C005BA7DD /* RegisterViewController.swift */; };
 		96F3E4C5271F6896005B1CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C4271F6896005B1CF5 /* AppDelegate.swift */; };
 		96F3E4C7271F6896005B1CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C6271F6896005B1CF5 /* SceneDelegate.swift */; };
 		96F3E4C9271F6896005B1CF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C8271F6896005B1CF5 /* ViewController.swift */; };
@@ -50,6 +51,7 @@
 		967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		967215BE275CD0F300D3E9DC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		967215C0275CDA0800D3E9DC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		9688B9062772777C005BA7DD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		96F3E4C1271F6896005B1CF5 /* TabPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3E4C4271F6896005B1CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F3E4C6271F6896005B1CF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,8 +104,6 @@
 		9614B5972765F62C00940DD6 /* Photo Manager */ = {
 			isa = PBXGroup;
 			children = (
-				9614B59A2765F8E200940DD6 /* CollectionTableViewCell.swift */,
-				9614B59C2765F93100940DD6 /* TileCollectionViewCell.swift */,
 			);
 			path = "Photo Manager";
 			sourceTree = "<group>";
@@ -111,10 +111,7 @@
 		9619A0522753C85A0031C1A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */,
 				96709B7F274293230086BA75 /* LocationManager.swift */,
-				967215BE275CD0F300D3E9DC /* MapViewController.swift */,
-				96709B81274293B80086BA75 /* SearchViewController.swift */,
 				9614B5972765F62C00940DD6 /* Photo Manager */,
 			);
 			path = Models;
@@ -123,6 +120,8 @@
 		9619A0532753C8760031C1A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9614B59A2765F8E200940DD6 /* CollectionTableViewCell.swift */,
+				9614B59C2765F93100940DD6 /* TileCollectionViewCell.swift */,
 				96F3E4CA271F6896005B1CF5 /* Main.storyboard */,
 			);
 			path = Views;
@@ -132,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9619A0592753ED030031C1A6 /* LoginViewController.swift */,
+				9688B9062772777C005BA7DD /* RegisterViewController.swift */,
 				967215C0275CDA0800D3E9DC /* ActionViewController.swift */,
 				9614B59E2765FA3D00940DD6 /* SubscriptionViewController.swift */,
 				9614B5A02765FACB00940DD6 /* EmailViewController.swift */,
@@ -139,6 +139,9 @@
 				967215BA275CC87800D3E9DC /* SettingsViewController.swift */,
 				9614B5A42765FE1B00940DD6 /* HomeViewController.swift */,
 				9614B5982765F81F00940DD6 /* MediaViewController.swift */,
+				96709B81274293B80086BA75 /* SearchViewController.swift */,
+				967215BE275CD0F300D3E9DC /* MapViewController.swift */,
+				967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				96709B82274293B80086BA75 /* SearchViewController.swift in Sources */,
 				967215BD275CC8B100D3E9DC /* SettingsTableViewCell.swift in Sources */,
 				967215BB275CC87800D3E9DC /* SettingsViewController.swift in Sources */,
+				9688B9072772777C005BA7DD /* RegisterViewController.swift in Sources */,
 				96709B80274293230086BA75 /* LocationManager.swift in Sources */,
 				9614B59F2765FA3D00940DD6 /* SubscriptionViewController.swift in Sources */,
 				9614B59B2765F8E200940DD6 /* CollectionTableViewCell.swift in Sources */,
@@ -473,6 +477,8 @@
 				DEVELOPMENT_TEAM = 445QFW7MKQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabPro/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your precise location is used to calculate turn-by-turn directions and show your location on the map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -502,6 +508,8 @@
 				DEVELOPMENT_TEAM = 445QFW7MKQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TabPro/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Your precise location is used to calculate turn-by-turn directions and show your location on the map";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
