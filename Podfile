@@ -9,7 +9,10 @@ target 'TabPro' do
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
 pod 'RxSwift'
-pod 'RxCocoa' 
+pod 'RxCocoa'
+pod 'MapboxMaps', '10.1.0'
+pod 'MapboxNavigation', '~> 2.0'
+pod 'MapboxSearchUI', ">= 1.0.0-beta.15", "< 2.0" 
 
   # Pods for TabPro
 

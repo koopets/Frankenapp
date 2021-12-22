@@ -25,6 +25,10 @@
 		967215BF275CD0F300D3E9DC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967215BE275CD0F300D3E9DC /* MapViewController.swift */; };
 		967215C1275CDA0800D3E9DC /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967215C0275CDA0800D3E9DC /* ActionViewController.swift */; };
 		9688B9072772777C005BA7DD /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9688B9062772777C005BA7DD /* RegisterViewController.swift */; };
+		9689D7B9277291A200809EAA /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689D7B8277291A200809EAA /* UserViewController.swift */; };
+		9689D7BB2772928900809EAA /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689D7BA2772928900809EAA /* UserTableViewCell.swift */; };
+		9689D7BD2772997B00809EAA /* SwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689D7BC2772997B00809EAA /* SwitchTableViewCell.swift */; };
+		9689D7BF2772B19E00809EAA /* MapsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9689D7BE2772B19E00809EAA /* MapsSearchViewController.swift */; };
 		96F3E4C5271F6896005B1CF5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C4271F6896005B1CF5 /* AppDelegate.swift */; };
 		96F3E4C7271F6896005B1CF5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C6271F6896005B1CF5 /* SceneDelegate.swift */; };
 		96F3E4C9271F6896005B1CF5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F3E4C8271F6896005B1CF5 /* ViewController.swift */; };
@@ -52,6 +56,10 @@
 		967215BE275CD0F300D3E9DC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		967215C0275CDA0800D3E9DC /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		9688B9062772777C005BA7DD /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9689D7B8277291A200809EAA /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		9689D7BA2772928900809EAA /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		9689D7BC2772997B00809EAA /* SwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTableViewCell.swift; sourceTree = "<group>"; };
+		9689D7BE2772B19E00809EAA /* MapsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapsSearchViewController.swift; sourceTree = "<group>"; };
 		96F3E4C1271F6896005B1CF5 /* TabPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3E4C4271F6896005B1CF5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F3E4C6271F6896005B1CF5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,8 +128,11 @@
 		9619A0532753C8760031C1A6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */,
 				9614B59A2765F8E200940DD6 /* CollectionTableViewCell.swift */,
 				9614B59C2765F93100940DD6 /* TileCollectionViewCell.swift */,
+				9689D7BA2772928900809EAA /* UserTableViewCell.swift */,
+				9689D7BC2772997B00809EAA /* SwitchTableViewCell.swift */,
 				96F3E4CA271F6896005B1CF5 /* Main.storyboard */,
 			);
 			path = Views;
@@ -141,7 +152,8 @@
 				9614B5982765F81F00940DD6 /* MediaViewController.swift */,
 				96709B81274293B80086BA75 /* SearchViewController.swift */,
 				967215BE275CD0F300D3E9DC /* MapViewController.swift */,
-				967215BC275CC8B100D3E9DC /* SettingsTableViewCell.swift */,
+				9689D7B8277291A200809EAA /* UserViewController.swift */,
+				9689D7BE2772B19E00809EAA /* MapsSearchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,8 +321,10 @@
 			files = (
 				967215BF275CD0F300D3E9DC /* MapViewController.swift in Sources */,
 				9614B59D2765F93100940DD6 /* TileCollectionViewCell.swift in Sources */,
+				9689D7BD2772997B00809EAA /* SwitchTableViewCell.swift in Sources */,
 				9619A05A2753ED030031C1A6 /* LoginViewController.swift in Sources */,
 				9614B5A52765FE1B00940DD6 /* HomeViewController.swift in Sources */,
+				9689D7BB2772928900809EAA /* UserTableViewCell.swift in Sources */,
 				967215C1275CDA0800D3E9DC /* ActionViewController.swift in Sources */,
 				9614B5A12765FACB00940DD6 /* EmailViewController.swift in Sources */,
 				96709B82274293B80086BA75 /* SearchViewController.swift in Sources */,
@@ -322,9 +336,11 @@
 				9614B59B2765F8E200940DD6 /* CollectionTableViewCell.swift in Sources */,
 				96F3E4C9271F6896005B1CF5 /* ViewController.swift in Sources */,
 				96F3E4C5271F6896005B1CF5 /* AppDelegate.swift in Sources */,
+				9689D7BF2772B19E00809EAA /* MapsSearchViewController.swift in Sources */,
 				9614B5992765F81F00940DD6 /* MediaViewController.swift in Sources */,
 				9614B5A32765FD9400940DD6 /* AboutViewController.swift in Sources */,
 				96F3E4C7271F6896005B1CF5 /* SceneDelegate.swift in Sources */,
+				9689D7B9277291A200809EAA /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

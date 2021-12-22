@@ -9,6 +9,11 @@ import Foundation
 import UIKit
 import FirebaseAuth
 import Firebase
+import MapboxMaps
+import MapboxSearchUI
+import MapboxNavigation
+import MapboxDirections
+import MapboxSearch
 
 class LoginViewController: UIViewController {
     
@@ -107,7 +112,8 @@ class LoginViewController: UIViewController {
                     let vcTwo = UINavigationController(rootViewController: AboutViewController())
                     let vcThree = UINavigationController(rootViewController: ActionViewController())
                     let vcFour = UINavigationController(rootViewController: MediaViewController())
-                    let vcFive = UINavigationController(rootViewController: MapViewController())
+                    //let vcFive = UINavigationController(rootViewController: MapViewController())
+                    let vcFive = UINavigationController(rootViewController: MapsSearchViewController())
                     let vcSix = UINavigationController(rootViewController: SubscriptionViewController())
                     
                     vcOne.title = "Home"

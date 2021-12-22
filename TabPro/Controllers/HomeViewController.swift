@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         
         
         navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchSmt)),
-                                              UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.plus"), style: .done, target: self, action: nil)]
+                                              UIBarButtonItem(image: UIImage(systemName: "person.crop.circle.badge.plus"), style: .done, target: self, action: #selector(user))]
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(image: UIImage(systemName: "music.note.house.fill"), style: .done, target: self, action: nil),
                                                   UIBarButtonItem(image: UIImage(systemName: "gear"), style: .done, target: self, action: #selector(doSmt))]
         
@@ -37,6 +37,13 @@ class HomeViewController: UIViewController {
     @objc func doSmt() {
         let st = SettingsViewController()
         navigationController?.pushViewController(st, animated: true)
+    }
+    
+    @objc func user() {
+        let proUser = UserViewController()
+        navigationController?.pushViewController(proUser, animated: true)
+        
+        
     }
     
     @objc func searchSmt() {

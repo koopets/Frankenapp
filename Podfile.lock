@@ -425,11 +425,42 @@ PODS:
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.7.0)
   - leveldb-library (1.22.1)
+  - MapboxCommon (20.1.0)
+  - MapboxCoreMaps (10.1.0):
+    - MapboxCommon (~> 20.1)
+  - MapboxCoreNavigation (2.0.1):
+    - MapboxDirections (~> 2.0)
+    - MapboxMobileEvents (~> 1.0)
+    - MapboxNavigationNative (~> 69.0)
+  - MapboxDirections (2.1.0):
+    - Polyline (~> 5.0)
+    - Turf (~> 2.0)
+  - MapboxMaps (10.1.0):
+    - MapboxCommon (= 20.1.0)
+    - MapboxCoreMaps (= 10.1.0)
+    - MapboxMobileEvents (= 1.0.6)
+    - Turf (~> 2.0)
+  - MapboxMobileEvents (1.0.6)
+  - MapboxNavigation (2.0.1):
+    - MapboxCoreNavigation (= 2.0.1)
+    - MapboxMaps (~> 10.0)
+    - MapboxMobileEvents (~> 1.0)
+    - MapboxSpeech (~> 2.0)
+    - Solar-dev (~> 3.0)
+  - MapboxNavigationNative (69.0.3):
+    - MapboxCommon (~> 20.0)
+  - MapboxSearch (1.0.0-beta.16):
+    - MapboxCommon (~> 20.1.0)
+    - MapboxMobileEvents (~> 1.0.6)
+  - MapboxSearchUI (1.0.0-beta.16):
+    - MapboxSearch (< 2.0, >= 1.0.0-beta.16)
+  - MapboxSpeech (2.0.0)
   - nanopb (2.30908.0):
     - nanopb/decode (= 2.30908.0)
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - Polyline (5.0.2)
   - PromisesObjC (2.0.0)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
@@ -437,11 +468,16 @@ PODS:
   - RxRelay (6.2.0):
     - RxSwift (= 6.2.0)
   - RxSwift (6.2.0)
+  - Solar-dev (3.0.1)
+  - Turf (2.1.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FloatingPanel
+  - MapboxMaps (= 10.1.0)
+  - MapboxNavigation (~> 2.0)
+  - MapboxSearchUI (< 2.0, >= 1.0.0-beta.15)
   - RxCocoa
   - RxSwift
 
@@ -461,11 +497,25 @@ SPEC REPOS:
     - gRPC-Core
     - GTMSessionFetcher
     - leveldb-library
+    - MapboxCommon
+    - MapboxCoreMaps
+    - MapboxCoreNavigation
+    - MapboxDirections
+    - MapboxMaps
+    - MapboxMobileEvents
+    - MapboxNavigation
+    - MapboxNavigationNative
+    - MapboxSearch
+    - MapboxSearchUI
+    - MapboxSpeech
     - nanopb
+    - Polyline
     - PromisesObjC
     - RxCocoa
     - RxRelay
     - RxSwift
+    - Solar-dev
+    - Turf
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -482,12 +532,26 @@ SPEC CHECKSUMS:
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
+  MapboxCommon: 8dd878a6c444b78bc1a819af1920dd1a0bb9f732
+  MapboxCoreMaps: 6ecb358c04600f6a947e52d41b78ac0c2570f930
+  MapboxCoreNavigation: 6b523a368630727659422744167fd88a7b158e01
+  MapboxDirections: f9787126bb46a3c9164978761ccdafccdbad1220
+  MapboxMaps: c19e24617b7135f87fac7dbad3a4baef657555ae
+  MapboxMobileEvents: 14d7ac3ee95b4142c4fec2205dfd48ff453e8871
+  MapboxNavigation: 64530555dea0a6db0064eb4f33f9e89d3315bb07
+  MapboxNavigationNative: a997b061e4eb93c1fb881992e5061e3a290f04f6
+  MapboxSearch: 5d94e4615634e381bac289955b64096054d211e4
+  MapboxSearchUI: e35269bc5f91710840d295a4cc92730d652f1be1
+  MapboxSpeech: e4ed02984444b6373374c72c369edaf045cc490c
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  Polyline: fce41d72e1146c41c6d081f7656827226f643dff
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
+  Solar-dev: 4612dc9878b9fed2667d23b327f1d4e54e16e8d0
+  Turf: d1220730a00b50a9fb5862c1fb6a5dd698c9e367
 
-PODFILE CHECKSUM: d263671500b3e58137fad3eab6492c2ac2b77227
+PODFILE CHECKSUM: 2503beddf54b5b6f00fbb9b3ccef3577376dbebc
 
 COCOAPODS: 1.11.2
