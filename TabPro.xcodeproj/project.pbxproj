@@ -119,7 +119,6 @@
 		9619A0522753C85A0031C1A6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				96709B7F274293230086BA75 /* LocationManager.swift */,
 				9614B5972765F62C00940DD6 /* Photo Manager */,
 			);
 			path = Models;
@@ -154,6 +153,7 @@
 				967215BE275CD0F300D3E9DC /* MapViewController.swift */,
 				9689D7B8277291A200809EAA /* UserViewController.swift */,
 				9689D7BE2772B19E00809EAA /* MapsSearchViewController.swift */,
+				96CE0A7E2773ED8A00D0CD90 /* Managers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -164,6 +164,14 @@
 				96F3E4C8271F6896005B1CF5 /* ViewController.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		96CE0A7E2773ED8A00D0CD90 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				96709B7F274293230086BA75 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		96F3E4B8271F6896005B1CF5 = {

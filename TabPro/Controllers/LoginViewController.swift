@@ -84,7 +84,7 @@ class LoginViewController: UIViewController {
         emailField.textContentType = .username
         emailField.autocapitalizationType = .none
         emailField.autocorrectionType = .no
-        loginButton.setTitle("Login", for: .normal)
+        loginButton.setTitle("Log In", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.addTarget(self, action: #selector(didTaploginButton), for: .touchUpInside)
         
